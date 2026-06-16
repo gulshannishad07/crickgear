@@ -1808,7 +1808,8 @@ html {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    z-index: 9999; /* Taaki ye sabse upar dikhe */
+    width: auto;
+    z-index: 999; /* Taaki ye sabse upar dikhe */
 }
 
 /* Common Button Style */

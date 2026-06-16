@@ -1804,7 +1804,7 @@ html {
 .floating-socials {
     position: fixed;
     bottom: 30px;
-    left: 30px;
+    left: 8px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1813,6 +1813,7 @@ html {
 }
 
 /* Common Button Style */
+
 .social-btn {
     width: 60px;
     height: 60px;

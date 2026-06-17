@@ -1860,34 +1860,81 @@ html {
     }
 }
 
-/* Modal Background Overlay - Website se match karta hua dark glassmorphism effect */
+
+/* Modal Background Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Dark theme match */
-    display: none; /* JS isse handle karega */
+    background: rgba(0, 0, 0, 0.85);
+    display: none; /* JS isse flex karega */
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    backdrop-filter: blur(8px); /* Premium blur effect */
+    backdrop-filter: blur(8px);
+    
+    /* Overlay ka smooth fade in */
+    animation: fadeInBg 0.4s ease-out forwards;
 }
 
-/* Modal Box Design - Match with your cards layout */
+/* Modal Box Design - Animation Yahan Lagi Hai */
 .modal-box {
-    background: #111111; /* Pitch black texture background */
+    background: #111111;
     color: #ffffff;
     padding: 35px 30px;
     border-radius: 16px;
     width: 90%;
     max-width: 420px;
     position: relative;
-    box-shadow: 0px 15px 35px rgba(255, 152, 0, 0.1); /* Halka sa orange glow effect */
-    border: 1px solid rgba(255, 152, 0, 0.2); /* Orange subtle border */
+    box-shadow: 0px 15px 35px rgba(255, 152, 0, 0.15);
+    border: 1px solid rgba(255, 152, 0, 0.2);
     text-align: center;
+
+    /* 🚀 Animation property: Pop-up aur Fade-in ek saath */
+    animation: popUpEffect 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+/* --- ANIMATIONS LOGIC --- */
+
+/* 1. Background ko dheere se dark karne ke liye */
+@keyframes fadeInBg {
+    from {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+    }
+}
+
+/* 2. Box ko thoda neeche se upar aur zoom hokar aane ke liye (Bounce Effect) */
+@keyframes popUpEffect {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px); /* Chhota hoga aur thoda neeche hoga */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Normal size aur sahi jagah par */
+    }
+}
+
+/* Baki ka purana form design (Inputs, Buttons, Close BTN) waisa hi rahega */
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #888; transition: color 0.3s; }
+.close-btn:hover { color: #ff9800; }
+.form-container h2 { font-size: 26px; margin-bottom: 8px; font-weight: 700; }
+.form-container p { font-size: 14px; color: #aaa; margin-bottom: 25px; }
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; margin-bottom: 6px; font-size: 13px; color: #ccc; }
+.input-group input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; outline: none; transition: border-color 0.3s; }
+.input-group input:focus { border-color: #ff9800; }
+.submit-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #ff9800, #e65100); border: none; color: white; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3); transition: transform 0.2s, box-shadow 0.2s; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5); }
+.toggle-text { margin-top: 20px; font-size: 14px; color: #aaa; }
+.toggle-text span { color: #ff9800; cursor: pointer; font-weight: 600; text-decoration: underline; }
 
 /* Close Button */
 .close-btn {
@@ -1974,4 +2021,39 @@ html {
     cursor: pointer; 
     font-weight: 600; 
     text-decoration: underline;
+}
+
+/* --- CLOSE ANIMATIONS LOGIC --- */
+
+/* 1. Background ko dheere se fade-out karne ke liye */
+@keyframes fadeOutBg {
+    from {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+    }
+    to {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+}
+
+/* 2. Box ko small aur fade-out karne ke liye */
+@keyframes popOutEffect {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Normal size aur sahi jagah par */
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px); /* Chhota hoga aur thoda neeche slide karega */
+    }
+}
+
+/* 3. Yeh class close animation trigger karegi */
+.modal-overlay.close-animation {
+    animation: fadeOutBg 0.3s ease-in forwards; /* Background fade animation */
+}
+
+.modal-overlay.close-animation .modal-box {
+    animation: popOutEffect 0.3s ease-in forwards; /* Box exit animation */
 }

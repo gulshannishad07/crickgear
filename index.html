@@ -818,8 +818,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. Close button par click karne par band hona
     closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+    // 1. Exit animation trigger karne ke liye class add karein
+    modal.classList.add("close-animation");
+
+    // 2. 0.3 second wait karein taaki animation poori dikhe
+    setTimeout(() => {
+        modal.style.display = "none"; // Form chhupayein
+        document.body.classList.remove("no-scroll"); 
+        modal.classList.remove("close-animation"); 
+    }, 200); 
+});
 
     // 3. Login aur Sign-Up ke beech switch karna
     toggleBtn.addEventListener("click", () => {

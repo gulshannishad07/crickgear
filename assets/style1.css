@@ -959,7 +959,7 @@ html {
 /* CONTENT */
 
 .product-content {
-  padding: 25px;
+  padding: 22px;
 }
 
 .product-category {
@@ -1544,6 +1544,7 @@ html {
 }
 
 .newsletter-label {
+  font-size: 25px;
   color: #fff;
   font-weight: 700;
 }

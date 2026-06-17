@@ -1859,3 +1859,119 @@ html {
         font-size: 24px;
     }
 }
+
+/* Modal Background Overlay - Website se match karta hua dark glassmorphism effect */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark theme match */
+    display: none; /* JS isse handle karega */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px); /* Premium blur effect */
+}
+
+/* Modal Box Design - Match with your cards layout */
+.modal-box {
+    background: #111111; /* Pitch black texture background */
+    color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0px 15px 35px rgba(255, 152, 0, 0.1); /* Halka sa orange glow effect */
+    border: 1px solid rgba(255, 152, 0, 0.2); /* Orange subtle border */
+    text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+.close-btn:hover { 
+    color: #ff9800; /* Hover karne par Orange ho jayega */
+}
+
+/* Typography */
+.form-container h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.form-container p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/* Input Fields - Premium Dark Look */
+.input-group { 
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+.input-group label { 
+    display: block; 
+    margin-bottom: 6px; 
+    font-size: 13px; 
+    color: #ccc;
+    font-weight: 500;
+}
+.input-group input {
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 8px; 
+    border: 1px solid #333;
+    background: #1a1a1a; 
+    color: #fff; 
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+/* Input focus karne par orange border */
+.input-group input:focus {
+    border-color: #ff9800;
+}
+
+/* Submit Button - Matches your "Shop Now" and "Grab Deal" Orange Buttons */
+.submit-btn {
+    width: 100%; 
+    padding: 14px; 
+    background: linear-gradient(135deg, #ff9800, #e65100); /* Premium Orange Gradient */
+    border: none; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 16px;
+    border-radius: 8px; 
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+}
+
+/* Bottom Toggle Text */
+.toggle-text { 
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #aaa; 
+}
+.toggle-text span { 
+    color: #ff9800; /* Orange Link */
+    cursor: pointer; 
+    font-weight: 600; 
+    text-decoration: underline;
+}

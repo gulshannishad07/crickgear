@@ -672,6 +672,40 @@
     </a>
 </div>
 
+<div id="loginModal" class="modal-overlay">
+    <div class="modal-box">
+        <span class="close-btn" id="closeModal">&times;</span>
+        
+        <div class="form-container">
+            <h2 id="formTitle">Welcome to CrickGear</h2>
+            <p id="formSubtitle">Please login to explore premium cricket gear!</p>
+            
+            <form id="authForm">
+                <div class="input-group" id="nameField" style="display: none;">
+                    <label for="userName">Full Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" required placeholder="Enter your email">
+                </div>
+                
+                <div class="input-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" id="userPassword" required placeholder="Enter password">
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Login</button>
+            </form>
+            
+            <p class="toggle-text">
+                Don't have an account? <span id="toggleForm">Sign Up</span>
+            </p>
+        </div>
+    </div>
+</div>
+
   <!-- JS File -->
   <script>
 
@@ -766,6 +800,46 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("loginModal");
+    const closeBtn = document.getElementById("closeModal");
+    const toggleBtn = document.getElementById("toggleForm");
+    
+    const formTitle = document.getElementById("formTitle");
+    const formSubtitle = document.getElementById("formSubtitle");
+    const nameField = document.getElementById("nameField");
+    const submitBtn = document.getElementById("submitBtn");
+
+    let isLogin = true;
+
+    // 1. Website par aate hi popup open karna
+    modal.style.display = "flex";
+
+    // 2. Close button par click karne par band hona
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // 3. Login aur Sign-Up ke beech switch karna
+    toggleBtn.addEventListener("click", () => {
+        isLogin = !isLogin;
+        if (!isLogin) {
+            formTitle.innerText = "Create Account";
+            formSubtitle.innerText = "Join CrickGear community today!";
+            nameField.style.display = "block";
+            submitBtn.innerText = "Sign Up";
+            toggleBtn.innerText = "Login";
+        } else {
+            formTitle.innerText = "Welcome to CrickGear";
+            formSubtitle.innerText = "Please login to explore premium cricket gear!";
+            nameField.style.display = "none";
+            submitBtn.innerText = "Login";
+            toggleBtn.innerText = "Sign Up";
+        }
+    });
+});
+
   </script>
 
 </body>

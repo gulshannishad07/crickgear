@@ -1325,16 +1325,7 @@ html {
 
   font-size: 2rem;
 
-  border-radius: 50%;
-
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #f97316
-  );
-
-  box-shadow:
-  0 15px 30px rgba(249,115,22,.25);
+ 
 }
 
 /* TITLE */

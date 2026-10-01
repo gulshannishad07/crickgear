@@ -14,7 +14,7 @@
 }
 
 html,
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -75,7 +75,7 @@ html {
   align-items: center;
   gap: 32px;
   list-style: none;
-  
+
 }
 
 .nav-link {
@@ -158,11 +158,11 @@ html {
 }
 
 /* overlay */
-.sidebar-overlay{
+.sidebar-overlay {
   position: fixed;
   inset: 0;
 
-  background: rgba(0,0,0,.55);
+  background: rgba(0, 0, 0, .55);
 
   opacity: 0;
   visibility: hidden;
@@ -172,7 +172,7 @@ html {
   z-index: 999;
 }
 
-.sidebar-overlay.active{
+.sidebar-overlay.active {
   opacity: 1;
   visibility: visible;
 }
@@ -194,7 +194,7 @@ html {
     display: none;
   }
 
-  .nav-menu{
+  .nav-menu {
     position: fixed;
     top: 0;
     right: 0;
@@ -209,10 +209,10 @@ html {
     flex-direction: column;
     align-items: flex-start;
 
-    background: linear-gradient(180deg,#020617,#0f172a);
+    background: linear-gradient(180deg, #020617, #0f172a);
 
-    border-left: 1px solid rgba(255,255,255,.12);
-    box-shadow: -25px 0 60px rgba(0,0,0,.35);
+    border-left: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: -25px 0 60px rgba(0, 0, 0, .35);
 
     z-index: 1000;
 
@@ -227,7 +227,7 @@ html {
       visibility .35s ease;
   }
 
-  .nav-menu.active{
+  .nav-menu.active {
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
@@ -658,10 +658,11 @@ html {
 /* 3. Ek lambi line mein chalane ke liye flex wrapper */
 .brand-marquee-content {
   display: flex;
-  gap: 25px; /* Buttons ke beech ka gap */
+  gap: 25px;
+  /* Buttons ke beech ka gap */
   width: max-content;
   /* 20s speed hai, slow karne ke liye badha sakte hain */
-  animation: brandMarquee 20s linear infinite; 
+  animation: brandMarquee 20s linear infinite;
 }
 
 /* Jab mouse le jayein toh brands ka ghumna ruk jaye */
@@ -686,7 +687,8 @@ html {
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   overflow: hidden;
-  flex-shrink: 0; /* Button ko chipakne se rokega */
+  flex-shrink: 0;
+  /* Button ko chipakne se rokega */
   z-index: 1;
   transition: all 0.35s ease;
 }
@@ -700,7 +702,8 @@ html {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
-  z-index: -1; /* Piche rakhne ke liye -1 perfect hai */
+  z-index: -1;
+  /* Piche rakhne ke liye -1 perfect hai */
 }
 
 /* Hover karne par slide-in effect aur text color dark blue */
@@ -720,9 +723,12 @@ html {
   .brand-strip {
     padding: 20px 0;
   }
+
   .brand-marquee-content {
-    gap: 15px; /* Mobile par gap thoda kam */
+    gap: 15px;
+    /* Mobile par gap thoda kam */
   }
+
   .brand-item {
     min-width: 130px;
     padding: 12px 20px;
@@ -736,8 +742,10 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-50%); /* Bina kisi jhatke ke smoothly loop repeat hoga */
+    transform: translateX(-50%);
+    /* Bina kisi jhatke ke smoothly loop repeat hoga */
   }
 }
 
@@ -789,13 +797,13 @@ html {
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
 }
 
 .category-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* Image */
@@ -863,7 +871,7 @@ html {
 
 @media (max-width: 1024px) {
   .categories-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -895,7 +903,7 @@ html {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
@@ -906,13 +914,13 @@ html {
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0,0,0,.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .08);
   transition: .4s ease;
 }
 
 .product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
 }
 
 /* BADGE */
@@ -925,11 +933,9 @@ html {
 
   padding: 8px 14px;
 
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #f97316
-  );
+  background: linear-gradient(135deg,
+      #facc15,
+      #f97316);
 
   color: #fff;
   font-size: .8rem;
@@ -1030,11 +1036,9 @@ html {
   font-size: .95rem;
   font-weight: 700;
 
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #f97316
-  );
+  background: linear-gradient(135deg,
+      #facc15,
+      #f97316);
 
   color: #fff;
 
@@ -1043,29 +1047,29 @@ html {
 
 .add-cart-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(249,115,22,.35);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, .35);
 }
 
-@media (max-width:1024px){
+@media (max-width:1024px) {
 
-  .products-grid{
-    grid-template-columns: repeat(2,1fr);
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .products-section{
-    padding:70px 0;
+  .products-section {
+    padding: 70px 0;
   }
 
-  .products-grid{
-    grid-template-columns:1fr;
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 
-  .product-img-box{
-    height:220px;
+  .product-img-box {
+    height: 220px;
   }
 
 }
@@ -1073,12 +1077,10 @@ html {
 /* ===== DEAL SECTION ===== */
 
 .deal-section {
-  padding: 100px 0;
-  background: linear-gradient(
-    135deg,
-    #020617,
-    #0f172a
-  );
+  padding: 40px 0;
+  background: linear-gradient(135deg,
+      #020617,
+      #0f172a);
   overflow: hidden;
 }
 
@@ -1119,7 +1121,7 @@ html {
   display: inline-block;
   padding: 8px 18px;
 
-  background: rgba(250,204,21,.15);
+  background: rgba(250, 204, 21, .15);
   color: #facc15;
 
   border-radius: 50px;
@@ -1137,7 +1139,7 @@ html {
 }
 
 .deal-text {
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, .75);
   line-height: 1.8;
   margin-bottom: 25px;
 }
@@ -1178,11 +1180,11 @@ html {
 
   text-align: center;
 
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
   backdrop-filter: blur(10px);
 
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255, 255, 255, .1);
 }
 
 .timer-box strong {
@@ -1192,7 +1194,7 @@ html {
 }
 
 .timer-box span {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, .7);
   font-size: .85rem;
 }
 
@@ -1206,7 +1208,7 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  
+
 
   transition: .35s ease;
 }
@@ -1276,13 +1278,13 @@ html {
 /* ===== FEATURES SECTION ===== */
 
 .features-section {
-  padding: 100px 0;
+  padding: 40px 0;
   background: #ffffff;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
@@ -1297,7 +1299,7 @@ html {
   border-radius: 24px;
 
   box-shadow:
-  0 10px 35px rgba(0,0,0,.08);
+    0 10px 35px rgba(0, 0, 0, .08);
 
   transition: .4s ease;
 
@@ -1308,7 +1310,7 @@ html {
   transform: translateY(-10px);
 
   box-shadow:
-  0 20px 50px rgba(0,0,0,.12);
+    0 20px 50px rgba(0, 0, 0, .12);
 }
 
 /* ICON */
@@ -1325,7 +1327,7 @@ html {
 
   font-size: 2rem;
 
- 
+
 }
 
 /* TITLE */
@@ -1343,22 +1345,22 @@ html {
   line-height: 1.8;
 }
 
-@media (max-width:1024px){
+@media (max-width:1024px) {
 
-  .features-grid{
-    grid-template-columns:repeat(2,1fr);
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .features-section{
-    padding:70px 0;
+  .features-section {
+    padding: 70px 0;
   }
 
-  .features-grid{
-    grid-template-columns:1fr;
+  .features-grid {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1366,7 +1368,7 @@ html {
 /* ===== TESTIMONIALS SECTION ===== */
 
 .testimonials-section {
-  padding: 100px 0;
+  padding: 40px 0;
   background: #f8fafc;
 }
 
@@ -1386,14 +1388,14 @@ html {
   padding: 30px;
   border-radius: 24px;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
   transition: all .4s ease;
   overflow: hidden;
 }
 
 .testimonial-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
 }
 
 /* TOP SECTION */
@@ -1451,13 +1453,13 @@ html {
   top: 15px;
   right: 20px;
   font-size: 4rem;
-  color: rgba(250,204,21,.15);
+  color: rgba(250, 204, 21, .15);
 }
 
 @media (max-width: 992px) {
 
   .testimonials-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -1488,7 +1490,7 @@ html {
   gap: 30px;
   width: max-content;
   /* 20s ka matlab speed hai, ise kam-zyada kar sakte hain */
-  animation: smoothMarquee 20s linear infinite; 
+  animation: smoothMarquee 20s linear infinite;
 }
 
 /* Jab koi mouse le jaye (Hover kare) toh reviews ruk jayein */
@@ -1498,7 +1500,7 @@ html {
 
 /* Har card ki fix width taaki design na bigde */
 .testimonial-card {
-  width: 350px; 
+  width: 350px;
   flex-shrink: 0;
 }
 
@@ -1507,14 +1509,16 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-50%); /* Aadhe raste par reset hoga bina jhatke ke */
+    transform: translateX(-50%);
+    /* Aadhe raste par reset hoga bina jhatke ke */
   }
 }
 
 .newsletter-section {
   padding: 80px 0;
-  background: linear-gradient(135deg,#facc15,#f97316);
+  background: linear-gradient(135deg, #facc15, #f97316);
 }
 
 .newsletter-container {
@@ -1531,7 +1535,7 @@ html {
 }
 
 .newsletter-content p {
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, .85);
 }
 
 .newsletter-label {
@@ -1572,7 +1576,7 @@ html {
 }
 
 .contact-section {
-  padding: 100px 0;
+  padding: 40px 0;
   background: #f8fafc;
 }
 
@@ -1598,14 +1602,14 @@ html {
   background: #fff;
   padding: 20px;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
 }
 
 .contact-form {
   background: #fff;
   padding: 30px;
   border-radius: 24px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
 }
 
 .form-group {
@@ -1637,11 +1641,9 @@ html {
   border-radius: 50px;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #f97316
-  );
+  background: linear-gradient(135deg,
+      #facc15,
+      #f97316);
 }
 
 .footer {
@@ -1662,7 +1664,7 @@ html {
 }
 
 .footer-box p {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, .7);
   line-height: 1.8;
 }
 
@@ -1679,7 +1681,7 @@ html {
 }
 
 .footer-links a {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, .7);
   text-decoration: none;
   transition: .3s;
 }
@@ -1693,26 +1695,26 @@ html {
   margin-top: 60px;
   text-align: center;
   padding: 25px 0;
-  border-top: 1px solid rgba(255,255,255,.1);
-  color: rgba(255,255,255,.6);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .6);
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
   .newsletter-container,
-  .contact-container{
-    grid-template-columns:1fr;
-    flex-direction:column;
+  .contact-container {
+    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
-  .newsletter-form{
-    min-width:100%;
-    flex-direction:column;
-    border-radius:20px;
+  .newsletter-form {
+    min-width: 100%;
+    flex-direction: column;
+    border-radius: 20px;
   }
 
-  .footer-container{
-    grid-template-columns:1fr;
+  .footer-container {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1738,13 +1740,11 @@ html {
 
   cursor: pointer;
 
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #f97316
-  );
+  background: linear-gradient(135deg,
+      #facc15,
+      #f97316);
 
-  box-shadow: 0 10px 30px rgba(249,115,22,.35);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, .35);
 
   overflow: hidden;
   isolation: isolate;
@@ -1794,257 +1794,354 @@ html {
 
 /* Floating Container */
 .floating-socials {
-    position: fixed;
-    bottom: 30px;
-    left: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: auto;
-    z-index: 999; /* Taaki ye sabse upar dikhe */
+  position: fixed;
+  bottom: 30px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: auto;
+  z-index: 999;
+  /* Taaki ye sabse upar dikhe */
 }
 
 /* Common Button Style */
 
 .social-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 /* WhatsApp Specific Color */
 .social-btn.whatsapp {
-    background-color: #25D366;
+  background-color: #25D366;
 }
 
 /* Instagram Specific Gradient Color */
 .social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 /* Hover Effects */
 .social-btn:hover {
-    transform: translateY(-5px); /* Hover karne par button thoda upar uthega */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-    filter: brightness(1.1); /* Thoda glow karega */
+  transform: translateY(-5px);
+  /* Hover karne par button thoda upar uthega */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+  /* Thoda glow karega */
 }
 
 /* Mobile Screen ke liye thoda chota size */
 @media (max-width: 768px) {
-    .floating-socials {
-        bottom: 20px;
-        right: 20px;
-        gap: 10px;
-    }
-    .social-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-    }
+  .floating-socials {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 
 /* Modal Background Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: none; /* JS isse flex karega */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    backdrop-filter: blur(8px);
-    
-    /* Overlay ka smooth fade in */
-    animation: fadeInBg 0.4s ease-out forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  /* JS isse flex karega */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+
+  /* Overlay ka smooth fade in */
+  animation: fadeInBg 0.4s ease-out forwards;
 }
 
 /* Modal Box Design - Animation Yahan Lagi Hai */
 .modal-box {
-    background: #111111;
-    color: #ffffff;
-    padding: 35px 30px;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 420px;
-    position: relative;
-    box-shadow: 0px 15px 35px rgba(255, 152, 0, 0.15);
-    border: 1px solid rgba(255, 152, 0, 0.2);
-    text-align: center;
+  background: #111111;
+  color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0px 15px 35px rgba(255, 152, 0, 0.15);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  text-align: center;
 
-    /* 🚀 Animation property: Pop-up aur Fade-in ek saath */
-    animation: popUpEffect 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  /* 🚀 Animation property: Pop-up aur Fade-in ek saath */
+  animation: popUpEffect 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 /* --- ANIMATIONS LOGIC --- */
 
 /* 1. Background ko dheere se dark karne ke liye */
 @keyframes fadeInBg {
-    from {
-        background: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0px);
-    }
-    to {
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(8px);
-    }
+  from {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+  }
 }
 
 /* 2. Box ko thoda neeche se upar aur zoom hokar aane ke liye (Bounce Effect) */
 @keyframes popUpEffect {
-    from {
-        opacity: 0;
-        transform: scale(0.8) translateY(30px); /* Chhota hoga aur thoda neeche hoga */
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0); /* Normal size aur sahi jagah par */
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+    /* Chhota hoga aur thoda neeche hoga */
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    /* Normal size aur sahi jagah par */
+  }
 }
 
 /* Baki ka purana form design (Inputs, Buttons, Close BTN) waisa hi rahega */
-.close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #888; transition: color 0.3s; }
-.close-btn:hover { color: #ff9800; }
-.form-container h2 { font-size: 26px; margin-bottom: 8px; font-weight: 700; }
-.form-container p { font-size: 14px; color: #aaa; margin-bottom: 25px; }
-.input-group { margin-bottom: 20px; text-align: left; }
-.input-group label { display: block; margin-bottom: 6px; font-size: 13px; color: #ccc; }
-.input-group input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; outline: none; transition: border-color 0.3s; }
-.input-group input:focus { border-color: #ff9800; }
-.submit-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #ff9800, #e65100); border: none; color: white; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3); transition: transform 0.2s, box-shadow 0.2s; }
-.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5); }
-.toggle-text { margin-top: 20px; font-size: 14px; color: #aaa; }
-.toggle-text span { color: #ff9800; cursor: pointer; font-weight: 600; text-decoration: underline; }
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff9800;
+}
+
+.form-container h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form-container p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #ff9800;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+}
+
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.toggle-text span {
+  color: #ff9800;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 /* Close Button */
 .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #888;
-    transition: color 0.3s;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
 }
-.close-btn:hover { 
-    color: #ff9800; /* Hover karne par Orange ho jayega */
+
+.close-btn:hover {
+  color: #ff9800;
+  /* Hover karne par Orange ho jayega */
 }
 
 /* Typography */
 .form-container h2 {
-    font-size: 26px;
-    margin-bottom: 8px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
 .form-container p {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 25px;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 25px;
 }
 
 /* Input Fields - Premium Dark Look */
-.input-group { 
-    margin-bottom: 20px; 
-    text-align: left; 
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
 }
-.input-group label { 
-    display: block; 
-    margin-bottom: 6px; 
-    font-size: 13px; 
-    color: #ccc;
-    font-weight: 500;
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #ccc;
+  font-weight: 500;
 }
+
 .input-group input {
-    width: 100%; 
-    padding: 12px; 
-    border-radius: 8px; 
-    border: 1px solid #333;
-    background: #1a1a1a; 
-    color: #fff; 
-    outline: none;
-    font-size: 14px;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
 }
+
 /* Input focus karne par orange border */
 .input-group input:focus {
-    border-color: #ff9800;
+  border-color: #ff9800;
 }
 
 /* Submit Button - Matches your "Shop Now" and "Grab Deal" Orange Buttons */
 .submit-btn {
-    width: 100%; 
-    padding: 14px; 
-    background: linear-gradient(135deg, #ff9800, #e65100); /* Premium Orange Gradient */
-    border: none; 
-    color: white; 
-    font-weight: bold; 
-    font-size: 16px;
-    border-radius: 8px; 
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  /* Premium Orange Gradient */
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
 }
 
 /* Bottom Toggle Text */
-.toggle-text { 
-    margin-top: 20px; 
-    font-size: 14px; 
-    color: #aaa; 
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
 }
-.toggle-text span { 
-    color: #ff9800; /* Orange Link */
-    cursor: pointer; 
-    font-weight: 600; 
-    text-decoration: underline;
+
+.toggle-text span {
+  color: #ff9800;
+  /* Orange Link */
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* --- CLOSE ANIMATIONS LOGIC --- */
 
 /* 1. Background ko dheere se fade-out karne ke liye */
 @keyframes fadeOutBg {
-    from {
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(8px);
-    }
-    to {
-        background: rgba(0, 0, 0, 0);
-        backdrop-filter: blur(0px);
-    }
+  from {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
 }
 
 /* 2. Box ko small aur fade-out karne ke liye */
 @keyframes popOutEffect {
-    from {
-        opacity: 1;
-        transform: scale(1) translateY(0); /* Normal size aur sahi jagah par */
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.8) translateY(20px); /* Chhota hoga aur thoda neeche slide karega */
-    }
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    /* Normal size aur sahi jagah par */
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    /* Chhota hoga aur thoda neeche slide karega */
+  }
 }
 
 /* 3. Yeh class close animation trigger karegi */
 .modal-overlay.close-animation {
-    animation: fadeOutBg 0.3s ease-in forwards; /* Background fade animation */
+  animation: fadeOutBg 0.3s ease-in forwards;
+  /* Background fade animation */
 }
 
 .modal-overlay.close-animation .modal-box {
-    animation: popOutEffect 0.3s ease-in forwards; /* Box exit animation */
+  animation: popOutEffect 0.3s ease-in forwards;
+  /* Box exit animation */
 }
